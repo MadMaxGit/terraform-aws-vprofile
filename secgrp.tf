@@ -1,7 +1,7 @@
 resource "aws_security_group" "vprofile-bean-elb-sg" {
   name        = "vprofile-bean-elb-sg"
   description = "Security group for bean elb"
-  vpc_id      = "module.vpc.vpc_id"
+  vpc_id      = module.vpc.vpc_id
   egress {
     from_port   = 0
     protocol    = "-1"
@@ -20,7 +20,7 @@ resource "aws_security_group" "vprofile-bean-elb-sg" {
 resource "aws_security_group" "vprofile-bastion-sg" {
   name        = "vprofile-bastion-sg"
   description = "Security group for bastion elb"
-  vpc_id      = "module.vpc.vpc_id"
+  vpc_id      = module.vpc.vpc_id
   egress {
     from_port   = 0
     protocol    = "-1"
@@ -39,7 +39,7 @@ resource "aws_security_group" "vprofile-bastion-sg" {
 resource "aws_security_group" "vprofile-prod-sg" {
   name        = "vprofile-prod-sg"
   description = "Security group for bastion elb"
-  vpc_id      = "module.vpc.vpc_id"
+  vpc_id      = module.vpc.vpc_id
   egress {
     from_port   = 0
     protocol    = "-1"
@@ -58,7 +58,7 @@ resource "aws_security_group" "vprofile-prod-sg" {
 resource "aws_security_group" "vprofile-backend-sg" {
   name        = "vprofile-backend-sg"
   description = "Security group for backend"
-  vpc_id      = "module.vpc.vpc_id"
+  vpc_id      = module.vpc.vpc_id
   egress {
     from_port   = 0
     protocol    = "-1"

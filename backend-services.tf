@@ -31,8 +31,8 @@ resource "aws_db_instance" "vprofile-rds" {
     vpc_security_group_ids = [aws_security_group.vprofile-backend-sg.id]
 }
 
-resource "aws_elasticache_cluster" "vprofile_cache" {
-    cluster_id = "vprofile_cache"
+resource "aws_elasticache_cluster" "vprofile-cache" {
+    cluster_id = "vprofile-cache"
     engine = "memcached"
     node_type = "cache.t2.micro"
     num_cache_nodes = 1
